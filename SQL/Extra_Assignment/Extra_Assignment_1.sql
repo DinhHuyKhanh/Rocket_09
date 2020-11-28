@@ -1,0 +1,41 @@
+DROP DATABASE IF EXISTS Fresher_management;
+CREATE DATABASE Fresher_management;
+
+USE Fresher_management;
+DROP TABLE IF EXISTS Trainee;
+CREATE TABLE Trainee(
+TaineeID 			TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+Full_Name 			NVARCHAR(255),
+Birth_Date 			DATE,
+Gender 				ENUM('male','female','unknown'),
+ET_IQ 				TINYINT UNSIGNED ,
+ET_Gmath 			TINYINT UNSIGNED ,
+ET_English 			TINYINT UNSIGNED,
+Training_Class 		VARCHAR(50),
+Evaluation_Notes 	TEXT
+);
+/*
+ALTER TABLE fresher_management.Trainee
+ADD COLUMN VTI_Account VARCHAR(255) NOT NULL UNIQUE; 
+ */
+-- EX2;
+ DROP TABLE IF EXISTS Ques2;
+ 
+ CREATE TABLE Ques2(
+ ID 			TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+ `Name`			NVARCHAR(50),
+ `CODE`			CHAR(5),
+ ModifiedDate 	DATETIME
+ );
+ 
+-- EX3;
+
+DROP TABLE IF EXISTS Ques3;
+
+CREATE TABLE Ques3(
+ID				TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+Name			NVARCHAR(50) NOT NULL,
+BirthDate 		DATE NOT NULL,
+Gender 			ENUM('0','1','NULL'),
+IsDeletedFlag 	BOOLEAN
+);
