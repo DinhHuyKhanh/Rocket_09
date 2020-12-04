@@ -52,8 +52,10 @@ WHERE
         LIMIT 1 ));
 
 # Question 3: Tạo view có chứa câu hỏi có những content quá dài (content quá 300 từ được coi là quá dài) và xóa nó đi
-
-
+CREATE VIEW conten_length AS
+SELECT content FROM question 
+WHERE character_length(content) >300;
+DROP VIEW conten_length;
 # Question 4 :Tạo view có chứa danh sách các phòng ban có nhiều nhân viên nhất
 CREATE VIEW emp_dep_max AS
 SELECT 
@@ -73,5 +75,11 @@ WHERE
             GROUP BY departmentID
             HAVING COUNT(*)
             ORDER BY COUNT(*) DESC
-            LIMIT 1))
+            LIMIT 1));
 
+#QUESTION 5 : 
+SELECT 
+* 
+FROM 
+`question`
+WHERE creatorID IN (SELECT AccountID FROM `account` WHERE FullName  like ' Đinh%')
