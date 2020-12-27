@@ -3,8 +3,8 @@ package backend;
 import emtity.*;
 
 public class insertAndShow {
-    public void department(){
-        Department[] departments = new Department[3];
+    public void department(Department[] departments){
+        departments = new Department[3];
         departments[0] = new Department(1,"sale");
         departments[1] = new Department(2,"marketing");
         departments[2] = new Department(3,"manages");
@@ -19,8 +19,8 @@ public class insertAndShow {
         System.out.println("Name: "+a.getDepartmentname());
         System.out.println("Department ----------\n ");
     }
-    public void position(){
-        Position[] positions = new Position[5];
+    public void position(Position[] positions){
+        positions = new Position[5];
         positions[0] = new Position(1,"Dev");
         positions[1] = new Position(2,"Test");
         positions[2] = new Position(3,"Scrum");
@@ -38,8 +38,8 @@ public class insertAndShow {
         System.out.println("Name: "+ a.getPositionname());
         System.out.println("position ----------\n ");
     }
-    public void accoun(){
-        Account[] accounts = new Account[3];
+    public void accoun(Account[] accounts){
+        accounts = new Account[3];
         accounts[0] = new Account(1,	"khanhdinh141@gmail.com",	"dinhkhanh141"	 ,"Đinh Huy Khánh",	1,	1,	"2020-11-27");
         accounts[1] = new Account(2,	"anloc145@gmail.com",	"anloc145",	 "Nguyễn An Lộc",	2,	1,	"2020-11-27");
         accounts[2] = new Account(3,	"nguyenthu151@gmail.com",	"nguyenthu151",	 "Nguyễn Thị Thu",	3,	2,	"2020-11-27");
@@ -61,8 +61,8 @@ public class insertAndShow {
         System.out.println("account------------------------------------------------------\n");
 
     }
-    public void group(){
-        Group[] group = new Group[3];
+    public void group(Group[] group){
+        group = new Group[3];
         group[0] = new Group(1,	"404 Not Found",	2,	"2019-01-01");
         group[1] = new Group(2,	"CLB người cao tuổi"	,1,	"2019-01-01");
         group[2] = new Group(3,	"Viện tâm thần",	3,	"2019-01-01");
@@ -80,8 +80,8 @@ public class insertAndShow {
         System.out.println("Date: "+a.getCreatedate());
         System.out.println("Group--------------------------------\n");
     }
-    public void groupaccount(){
-        AccountGroup[] ac = new AccountGroup[3];
+    public void groupaccount(AccountGroup[] ac){
+        ac = new AccountGroup[3];
         ac[0] = new AccountGroup(1,1,"2020-01-01");
         ac[1] = new AccountGroup(2,2,"2020-01-02");
         ac[2] = new AccountGroup(1,3,"2020=01-01");
