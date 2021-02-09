@@ -1,5 +1,6 @@
 package utils;
 
+import entity.Exam;
 import entity.group;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -63,6 +64,7 @@ public class UtilsHibernate {
 
         // add entity
         configuration.addAnnotatedClass(group.class);
+        configuration.addAnnotatedClass(Exam.class);
     }
 
     /**
