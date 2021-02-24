@@ -1,0 +1,64 @@
+package entity;
+
+
+import entity.primaryKey.GroupAccountKey;
+import org.hibernate.annotations.CreationTimestamp;
+
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.Date;
+
+@Entity
+@Table(name="GroupAccount")
+public class GroupAccount{
+
+    @EmbeddedId
+    private GroupAccountKey id;
+
+    @ManyToOne
+    @MapsId("AccountID")
+    @JoinColumn(name ="AccountID")
+    private Account account;
+
+    @ManyToOne
+    @MapsId("GroupID")
+    @JoinColumn(name = "GroupID")
+    private group group;
+
+    @Column(name="JoinDate")
+    @Temporal(TemporalType.TIMESTAMP)
+    @CreationTimestamp
+    private Date joinDate;
+
+    public GroupAccountKey getId() {
+        return id;
+    }
+
+    public void setId(GroupAccountKey id) {
+        this.id = id;
+    }
+
+    public Account getAccount() {
+        return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
+    }
+
+    public entity.group getGroup() {
+        return group;
+    }
+
+    public void setGroup(entity.group group) {
+        this.group = group;
+    }
+
+    public Date getJoinDate() {
+        return joinDate;
+    }
+
+    public void setJoinDate(Date joinDate) {
+        this.joinDate = joinDate;
+    }
+}
